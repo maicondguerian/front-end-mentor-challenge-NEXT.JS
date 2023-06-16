@@ -3,9 +3,9 @@ import { StyledContainer } from '../../../GlobalStyles/globalStyles'
 import { Form } from './Form'
 import { RightSide } from './RightSide'
 
-export const Container = ( {getState} ) => {
+export const FormContainer = ( {getState, className, isSubmitted} ) => {
   return (
-    <StyledContainer>
+    <StyledContainer className={className} isSubmitted={isSubmitted}>
         <Form getState={getState}/>
         <RightSide />
     </StyledContainer>

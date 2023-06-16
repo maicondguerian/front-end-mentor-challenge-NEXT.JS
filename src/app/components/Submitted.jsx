@@ -48,10 +48,12 @@ const useMyStyles = makeStyles({
     textTransform: 'unset',
     borderRadius: '7px',
     height: '49px',
-    fontWeight: '500',
+    fontWeight: '600',
     fontSize: '13.5px',
     '&:hover': {
-     backgroundColor: 'hsl(4, 100%, 67%)'
+      backgroundImage: 'linear-gradient( to right, #f07a19 0%, #f354be 51%, #f07a19 100% )',
+      boxShadow: '0 6px 20px hsl(4, 100%, 67%)',
+      transition: 'all 0.4s ease-in-out'
     }
   }
 });

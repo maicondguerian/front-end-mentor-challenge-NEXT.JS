@@ -1,5 +1,5 @@
 
-const { createGlobalStyle, styled } = require("styled-components");
+const { createGlobalStyle, styled, css, keyframes } = require("styled-components");
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -7,6 +7,8 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-size: 14px;
+
+       
     }
 
     body{
@@ -17,6 +19,17 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${props => props.theme.PrimaryColors.CharcoalGrey};
     }
 `
+const SlideInAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-85%);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+`;
+
 
 export const StyledContainer = styled.main`
     background-color: ${props => props.theme.PrimaryColors.White};
@@ -28,6 +41,13 @@ export const StyledContainer = styled.main`
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+
+    ${props =>{
+        props.className === 'slideIn' &&
+        css`
+           animation: ${SlideInAnimation} 0.3s;
+        `}
+    }
     `
 
 export const StyledForm = styled.form`
@@ -63,7 +83,7 @@ export const StyledForm = styled.form`
         }
     }
 
-     #list{
+     #icon-list-svg{
         background-image: url('/icon-list.svg');
         background-repeat: no-repeat;
         background-size: contain;
