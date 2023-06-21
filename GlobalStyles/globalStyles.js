@@ -103,7 +103,6 @@ export const StyledRightSide = styled.div`
     @media screen and (max-width: 944px){
         background-image: url('/illustration-sign-up-mobile.svg');
         width: 100%;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-radius:  0 0 20px 20px;
     }
 `
