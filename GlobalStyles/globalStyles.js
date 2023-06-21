@@ -18,16 +18,6 @@ export const GlobalStyles = createGlobalStyle`
         transform: translate(-50%, -50%);
         background-color: ${props => props.theme.PrimaryColors.CharcoalGrey};
     }
-`
-const SlideInAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-85%);
-  }
-  to {
-    opacity: 0.8;
-    transform: translateY(0);
-  }
 `;
 
 
@@ -71,26 +61,14 @@ export const StyledForm = styled.form`
     >div{
         font-size: 14px;
         display: flex;
-        gap: 1.1rem;
         align-items: center;
         width: 100%;
         word-wrap: break-word;
         position: relative;
-        
+
         >span:last-child{
             margin-left:34px;
         }
-    }
-
-     #icon-list-svg{
-        background-image: url('/icon-list.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        display: block;
-        width: 19px;
-        height: 19px;
-        position: absolute;
-        left: 0;
     }
 
     @media screen and (max-width: 944px){
@@ -100,6 +78,17 @@ export const StyledForm = styled.form`
             font-size: 50px;
          }
     }
+`
+
+export const FormDetails = styled.div`
+    background-image: url('/icon-list.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
 `
 
 export const StyledRightSide = styled.div`

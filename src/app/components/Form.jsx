@@ -6,10 +6,10 @@ import { MyContext } from '../../../contexts/MyContext';
 
 export const FormDetails = ({ text }) => {
   return (
-    <div>
-      <span id='icon-list-svg' />
+    <S.FormDetails>
+      <span />
       <span> {text} </span>
-    </div>
+    </S.FormDetails>
   );
 };
 
