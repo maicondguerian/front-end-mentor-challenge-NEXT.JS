@@ -95,6 +95,10 @@ export const StyledForm = styled.form`
 
     @media screen and (max-width: 944px){
         width: 100%;
+        padding: 1rem 2rem;
+         h1{
+            font-size: 50px;
+         }
     }
 `
 
@@ -109,6 +113,6 @@ export const StyledRightSide = styled.div`
     @media screen and (max-width: 944px){
         background-image: url('/illustration-sign-up-mobile.svg');
         width: 100%;
-        border-radius: 0px;
+        border-radius: 20px;
     }
 `

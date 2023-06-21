@@ -9,23 +9,23 @@ const StyledWrapeer = styled(StyledContainer)`
   align-items: baseline;
   flex-direction: column;
   justify-content: start;
-  width: 460px;
-  height: 480px;
-  padding: 4.5rem;
+  width: 500px;
+  height: 514px;
+  padding: 3.5rem;
   gap: 2rem;
   color: ${props => props.theme.PrimaryColors.DarkSlateGrey};
   
   span{
     background-image: url('/icon-success.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: block;
     height: 60px;
     width: 60px;
   }
 
   h1{
-    font-size:50px;
+    font-size:60px;
     line-height: 1;
   }
 
@@ -38,6 +38,22 @@ const StyledWrapeer = styled(StyledContainer)`
     span{
       background-image: none;
     }
+  }
+  @media screen and (max-width: 503px){
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+
+  }
+  @media screen and (max-width: 375px){
+    height: 100vh;
+    width: 100vw;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+
   }
 `
 
