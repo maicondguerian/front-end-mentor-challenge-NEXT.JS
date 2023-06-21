@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-size: 14px;
+        font-size: 16px;
 
        
     }
@@ -33,8 +33,8 @@ const SlideInAnimation = keyframes`
 
 export const StyledContainer = styled.main`
     background-color: ${props => props.theme.PrimaryColors.White};
-    width: 820px;
-    height: 550px;
+    width: 944px;
+    height: 645px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -42,13 +42,14 @@ export const StyledContainer = styled.main`
     align-items: center;
     padding: 1.5rem;
 
-    ${props =>{
-        props.className === 'slideIn' &&
-        css`
-           animation: ${SlideInAnimation} 0.3s;
-        `}
+
+    @media screen and (max-width: 944px){
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
     }
-    `
+`
 
 export const StyledForm = styled.form`
     height: 100%;
@@ -56,12 +57,10 @@ export const StyledForm = styled.form`
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: .9rem;
-    /* box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%), 0 0.063rem 0.125rem rgb(31 50 81 / 24%);
-    border-radius: 10px; */
+    gap: 1rem;
     
     h1{
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 700;
     }
 
@@ -72,9 +71,9 @@ export const StyledForm = styled.form`
     >div{
         font-size: 14px;
         display: flex;
-        gap: 1rem;
+        gap: 1.1rem;
         align-items: center;
-        width: 330px;
+        width: 100%;
         word-wrap: break-word;
         position: relative;
         
@@ -93,8 +92,11 @@ export const StyledForm = styled.form`
         position: absolute;
         left: 0;
     }
-    
-    `
+
+    @media screen and (max-width: 944px){
+        width: 100%;
+    }
+`
 
 export const StyledRightSide = styled.div`
     background-image: url('/illustration-sign-up-desktop.svg');
@@ -103,4 +105,10 @@ export const StyledRightSide = styled.div`
     width: 45%;
     height: 100%;
     border-radius: 10px;
+
+    @media screen and (max-width: 944px){
+        background-image: url('/illustration-sign-up-mobile.svg');
+        width: 100%;
+        border-radius: 0px;
+    }
 `

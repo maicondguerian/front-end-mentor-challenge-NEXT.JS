@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyledForm } from '../../../GlobalStyles/globalStyles'
+import * as S from '../../../GlobalStyles/globalStyles'
 import { Box, Button, FormHelperText, TextField } from '@mui/material'
 import { makeStyles } from '@material-ui/core'
 import { MyContext } from '../../../contexts/MyContext';
@@ -104,7 +104,7 @@ const Inputbox = ( {get} ) => {
 
 export const Form = ( {getState} ) => {
   return (
-    <StyledForm>
+    <S.StyledForm>
       <h1>Stay updated!</h1>
       <p>
         Join 60,000+ product managers receiving monthly updates on:
@@ -115,6 +115,6 @@ export const Form = ( {getState} ) => {
       <Inputbox 
         get={getState}
       />
-    </StyledForm>
+    </S.StyledForm>
   )
 }

@@ -57,6 +57,7 @@ const useMyStyles = makeStyles({
     }
   }
 });
+
 export const Submitted = ( {getGambiarra} ) => {
   const classes = useMyStyles();
   const { email, setEmail } = React.useContext(MyContext);
@@ -71,13 +72,13 @@ export const Submitted = ( {getGambiarra} ) => {
         fullWidth
         className={classes.button}
         onClick={()=>{
-          getGambiarra(prev => !prev);
-          setEmail('');
+        getGambiarra(prev => !prev);
+        setEmail('');
         }}
       >
         Dimiss Message
       </Button>
     </StyledWrapeer>
-  )
-}
+  );
+};
 
