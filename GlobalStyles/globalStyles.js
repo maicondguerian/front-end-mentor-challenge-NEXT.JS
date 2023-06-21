@@ -38,6 +38,7 @@ export const StyledContainer = styled.main`
         width: 100vw;
         height: 100vh;
         padding: 0;
+        border-radius: unset;
     }
 `
 
@@ -102,6 +103,7 @@ export const StyledRightSide = styled.div`
     @media screen and (max-width: 944px){
         background-image: url('/illustration-sign-up-mobile.svg');
         width: 100%;
-        border-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 `
