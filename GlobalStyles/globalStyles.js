@@ -74,7 +74,7 @@ export const StyledForm = styled.form`
 
     @media screen and (max-width: 944px){
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
          h1{
             font-size: 50px;
          }
